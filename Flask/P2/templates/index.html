@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>{{ data.pestana}}</title>
+</head>
+<body>
+    <h3>
+        Cursos ofertados
+        <ul>
+            {% for c in data.cursos %}
+                <li>
+                    {{ c }}
+                </li>
+            {% endfor %}
+        </ul>
+    </h3>
+</body>
+</html>
