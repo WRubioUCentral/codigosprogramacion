@@ -1,0 +1,18 @@
+{% extends './layout.html' %}
+
+{% block title %}{{ data.pestana }}{% endblock %}
+
+{% block body %}
+<h1>
+    {{ data.titulo }}
+</h1>
+
+<ul>
+    {% for c in data.cursos %}
+    <li>
+        {{ c }}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

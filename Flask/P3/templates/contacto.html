@@ -1,0 +1,12 @@
+{% extends './layout.html' %}
+
+{% block title %}{{ data.titulo }}{% endblock %}
+
+{% block body %}
+<h1>
+    El ingeniero {{ data.nombre }}
+    tiene {{ data.edad }} años cumplidos a la fecha.
+</h1>
+
+
+{% endblock %}
