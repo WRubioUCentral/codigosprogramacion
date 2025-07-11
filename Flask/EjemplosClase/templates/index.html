@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Mi página</title>
+</head>
+<body>
+    <div>
+        <p class="cursiva">
+            Mi nombre es {{ data.nombre }} {{ data.apellido}}, soy de la hermosa ciudad de {{ data.ciudad }}, departamento del {{ data.depto }} y tengo {{ data.edad }} años.
+        </p>
+        <ul>
+            <li>Consuelo</li>
+            <li>Gina</li>
+            <li>Zamir</li>
+            <li>Alejandro</li>
+            <li>Elizabeth</li>
+            <li>Jhon</li>
+        </ul>
+        <canvas id="myChart" width="200" height="100"></canvas>
+        <script src="{{ url_for('static', filename='styles.js') }}"></script>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsum quis adipisci cum placeat. Voluptatibus necessitatibus nesciunt, consectetur suscipit ducimus at animi maxime tenetur, soluta nobis ab aliquam corrupti optio.
+        </p>
+    </div>
+    
+</body>
+</html>
