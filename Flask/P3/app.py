@@ -2,8 +2,6 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-
-
 @app.before_request
 def before_request():
     print('Antes de la petición...')

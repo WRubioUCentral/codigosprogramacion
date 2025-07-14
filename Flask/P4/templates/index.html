@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de análisis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        Encabezado principal.
+    </header>
+    <h1>Título principal</h1>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    </p>
+
+    <!-- Formulario para subir CSV -->
+    <form id="csvForm" method="POST" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="csv_file" accept=".csv" required>
+        <button type="submit">Cargar CSV</button>
+    </form>
+    <div id="message"></div>
+    <select id="chartType" class="chart-selector">
+        <option value="line">Línea</option>
+        <option value="bar">Barras</option>
+    </select>
+    <!-- Gráfico -->
+    <div class="chart-container" style="height: 400px; width: 50%;">
+        <canvas id="grafico1"></canvas>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Datos iniciales pasados desde Flask
+        const initialData = {{ df | tojson | safe if df else 'null' }};
+    </script>
+    <script src="{{ url_for('static', filename='graph.js') }}"></script>
+    <script src="{{ url_for('static', filename='uploadHandler.js') }}"></script>
+
+    <footer>Elaborado &cap; 2025.</footer>
+</body>
+</html>
