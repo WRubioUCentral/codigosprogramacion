@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de análisis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+
+    <!--Barra de navegación-->
+    <section class="banner">
+        <div class="banner-cajon">
+            <!--Sección de logo-->
+            <div class="banner-logo">
+                <img src="{{ url_for('static', filename='multimedia/logo.png') }}" alt="">
+            </div>
+            <!--Menú del medio-->
+            <div class="banner-menu">
+                <ul class="menu-lista">
+                    <li class="listas">Barras y lineas</li>
+                    <li class="listas">Gráficas</li>
+                    <li class="listas">Contacto</li>
+                </ul>
+            </div>
+            <!--Búsquedas-->
+            <div class="banner-buscar">
+                <div class="buscar-lipa">
+                    <img src="{{ url_for('static', filename='multimedia/lipa.png') }}" alt="">
+                </div>
+                <div class="buscar-busqueda">
+                    <input type="text" placeholder="Búsqueda">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Hasta aquí-->
+
+
+    <section class="info">
+        <div>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            </p>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+        
+    
+    </section>
+
+    <!-- Formulario para subir CSV -->
+    <form id="csvForm" method="POST" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="csv_file" accept=".csv" required>
+        <button type="submit">Cargar CSV</button>
+    </form>
+    <div id="message"></div>
+    <select id="chartType" class="chart-selector">
+        <option value="line">Línea</option>
+        <option value="bar">Barras</option>
+    </select>
+    <!-- Gráfico -->
+    <div class="chart-container" style="height: 400px; width: 50%;">
+        <canvas id="grafico1"></canvas>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Datos iniciales pasados desde Flask
+        const initialData = {{ df | tojson | safe if df else 'null' }};
+    </script>
+    <script src="{{ url_for('static', filename='graph.js') }}"></script>
+    <script src="{{ url_for('static', filename='uploadHandler.js') }}"></script>
+
+    <footer>Elaborado &cap; 2025.</footer>
+</body>
+</html>
