@@ -37,31 +37,83 @@
     </section>
     <!--Hasta aquí-->
 
-
-    <section class="info">
-        <div>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            </p>
-        </div>
-        <div>
-            <div></div>
-            <div></div>
-        </div>
-        
-    
+    <!--Sección de seperación-->
+    <section class="separacion">
     </section>
 
-    <!-- Formulario para subir CSV -->
-    <form id="csvForm" method="POST" action="/upload" enctype="multipart/form-data">
-        <input type="file" name="csv_file" accept=".csv" required>
-        <button type="submit">Cargar CSV</button>
-    </form>
-    <div id="message"></div>
-    <select id="chartType" class="chart-selector">
-        <option value="line">Línea</option>
-        <option value="bar">Barras</option>
-    </select>
+    <!--Sección de explicación de gráficas-->
+    <section class="info">
+        <div class="cajon-texto">
+            <div class="texto1 restaltar bordear">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto neque voluptates adipisci dolorem fugiat quasi mollitia praesentium, consequuntur odio magni eligendi, labore, fugit consectetur natus et soluta unde nulla possimus?
+            </div>
+            <div class="texto2">
+                <div class="texto2-a restaltar bordear">
+                    <div class="lineas-titulo">
+                        <p>
+                            Diagrama de líneas
+                        </p>
+                    </div>
+                    <div class="lineas">
+                        <div class="lineas-texto">
+                            <p>
+                                Caja texto diagrama de líneas.
+                            </p>
+                        </div>
+                        <div class="lineas-imagen">
+                            <img src="{{ url_for('static', filename='multimedia/lineas.jpg') }} ">
+                        </div>
+                    </div>
+                </div>
+                <div class="texto2-b restaltar bordear">
+                    <div class="lineas-titulo">
+                        <p>
+                            Diagrama de barras
+                        </p>
+                    </div>
+                    <div class="lineas">
+                        <div class="lineas-texto">
+                            <p>
+                                Caja texto diagrama de barras.
+                            </p>
+                        </div>
+                        <div class="lineas-imagen">
+                            <img src="{{ url_for('static', filename='multimedia/barras.jpg') }} ">
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Sección de seperación-->
+    <section class="separacion">
+    </section>
+
+    <!--Sección de subida de archivos-->
+    <section>
+        <!-- Formulario para subir CSV -->
+        <div class="boton-carga">
+            <form id="csvForm" method="POST" action="/upload" enctype="multipart/form-data">
+                <input type="file" name="csv_file" accept=".csv" required>
+                <button type="submit" class="estilo-boton">Cargar CSV</button>
+            </form>
+        </div>
+
+        <!-- Mensaje de éxito o error -->
+        <div id="message"></div>
+            <select id="chartType" class="chart-selector">
+                <option value="line">Línea</option>
+                <option value="bar">Barras</option>
+        </select>
+
+    </section>
+
+
+
+
+
     <!-- Gráfico -->
     <div class="chart-container" style="height: 400px; width: 50%;">
         <canvas id="grafico1"></canvas>

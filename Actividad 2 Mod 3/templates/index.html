@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Renderizador</title>
+</head>
+<body>
+    <h1>
+        Error 404: Página no encontrada
+    </h1>
+    <h3>
+        <p>
+            Lo sentimos, la página que buscas no existe o ha sido movida.
+        </p>
+    </h3>
+
+    <h2>
+        Gráfico interactivo
+    </h2>
+
+    <!-- Gráfico -->
+    <div style="height: 400px; width: 50%;">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <!-- Incluye Chart.js antes de tu script -->
+    <script src="{{ url_for('static', filename='graph.js') }}"></script>
+</body>
+</html>

@@ -1,3 +1,9 @@
+.separacion {
+    width: 100%;
+    background-color: white;
+    height: 20px;
+}
+
 .banner {
     background-color: #444;
     color: whitesmoke;
@@ -82,6 +88,10 @@
     width: 20%;
 }
 
+.buscar-lipa:hover {
+    scale: 1.1;
+}
+
 .buscar-lipa img {
     width: 30px;
 }
@@ -105,6 +115,93 @@
 
 /*
 ||||||||||||||||||||||||||||||||||
-|||||||Segmento de búsqueda|||||||
+|||||||||Cajones de texto|||||||||
 ||||||||||||||||||||||||||||||||||
 */
+
+.info {
+    width: 100%;
+    background-color: #444;
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cajon-texto {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    gap: 25px;
+}
+
+.texto1 {
+    width: 40%;
+    align-content: center;
+}
+
+.texto2 {
+    padding: 10px;
+    padding-right: 10px;
+    width: 55%;
+    justify-content: space-between;
+}
+
+.bordear {
+    border-radius: 10px;
+}
+
+.textos {
+    list-style: none;
+    justify-content: center;
+}
+
+.lineas {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    gap: 5%;
+}
+
+.lineas-titulo {
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.lineas-texto {
+    width: 35%;
+    align-items: center;
+}
+
+.lineas-imagen {
+    width: 60%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.lineas-imagen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.restaltar {
+    transition: background-color 1s, scale 1s;
+}
+
+.restaltar:hover {
+    background-color: #717171;
+    scale: 1.05;
+}
+
+/*
+||||||||||||||||||||||||||||||||||
+|||||||||Botones de carga|||||||||
+||||||||||||||||||||||||||||||||||
+*/
+
+.boton-carga {
+    background-color: aqua;
+}
