@@ -92,22 +92,48 @@
     </section>
 
     <!--Sección de subida de archivos-->
-    <section>
-        <!-- Formulario para subir CSV -->
-        <div class="boton-carga">
-            <form id="csvForm" method="POST" action="/upload" enctype="multipart/form-data">
-                <input type="file" name="csv_file" accept=".csv" required>
-                <button type="submit" class="estilo-boton">Cargar CSV</button>
-            </form>
+    <section class="caja-carga">
+        <div class="E-A caja-gris">
+            <div>
+                <p>
+                    Botón de carga
+                </p>
+            </div>
+            <div>
+                <!-- Botón para subir CSV -->
+                <form id="csvForm" method="POST" action="/upload" enctype="multipart/form-data">
+                    <input type="file" class="boton-carga" name="csv_file" accept=".csv" required>
+                </form>
+            </div>
         </div>
-
-        <!-- Mensaje de éxito o error -->
-        <div id="message"></div>
-            <select id="chartType" class="chart-selector">
-                <option value="line">Línea</option>
-                <option value="bar">Barras</option>
-        </select>
-
+        <div class="E-B caja-gris">
+            <!-- Mensaje de éxito o error -->
+            <div id="message"></div>
+        </div>
+        <div class="E-A caja-gris">
+            <div>
+                Tipo de gráfico
+            </div>
+            <div>
+                <form id="csvForm" method="POST" action="/upload" enctype="multipart/form-data">
+                    <select id="chartType" class="chart-selector">
+                        <option value="line">Línea</option>
+                        <option value="bar">Barras</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <div class="E-A caja-gris">
+            <div>
+                Cargar/Actualizar
+            </div>
+            <div>
+                    <form id="csvForm" method="POST" action="/upload" enctype="multipart/form-data">
+                    <button type="submit" class="estilo-boton">Cargar CSV</button>
+                </form>
+            </div>
+        </div>
+        
     </section>
 
 
