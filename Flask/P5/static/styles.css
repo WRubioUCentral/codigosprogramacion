@@ -124,6 +124,7 @@ body {
 */
 
 .info {
+    justify-content: center;
     width: 100%;
     background-color: #444;
     color: whitesmoke;
@@ -131,22 +132,25 @@ body {
 }
 
 .cajon-texto {
+    background-color: aqua;
     display: flex;
     padding: 10px;
     justify-content: center;
-    gap: 25px;
-}
-
-.texto1 {
-    width: 40%;
-    align-content: center;
 }
 
 .texto2 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: rosybrown;
     padding: 10px;
     padding-right: 10px;
-    width: 55%;
     justify-content: space-between;
+}
+
+.texto1 {
+    width: 20%;
+    align-content: center;
 }
 
 .bordear {
@@ -159,7 +163,6 @@ body {
 }
 
 .lineas {
-    display: flex;
     justify-content: space-between;
     padding: 5px;
     gap: 5%;
@@ -174,12 +177,13 @@ body {
 }
 
 .lineas-texto {
-    width: 35%;
-    align-items: center;
+    height: 30%;
+    justify-content: left;
 }
 
 .lineas-imagen {
-    width: 60%;
+    background-color: white;
+    width: 100%;
     height: 200px;
     align-items: center;
     justify-content: center;
@@ -237,5 +241,12 @@ body {
     align-items: center;
     justify-content: center;
     gap: 50px;
+    display: flex;
+}
+
+.csv {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     display: flex;
 }

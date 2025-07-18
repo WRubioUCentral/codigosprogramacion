@@ -20,10 +20,19 @@
 
     <!-- Gráfico -->
     <div style="height: 400px; width: 50%;">
-        <canvas id="myChart"></canvas>
+        <canvas id="barChart"></canvas>
     </div>
+    <script src="{{ url_for('static', filename='barras.js') }}"></script>
 
-    <!-- Incluye Chart.js antes de tu script -->
-    <script src="{{ url_for('static', filename='graph.js') }}"></script>
+    <div style="height: 20px; width: 100%; background-color: aqua;"></div>
+
+    <!-- Gráfico de líneas -->
+    <div style="height: 400px; width: 50%;">
+        <canvas id="lineChart"></canvas>
+    </div>
+    <script src="{{ url_for('static', filename='lineas.js') }}"></script>
+    
 </body>
 </html>
+
+    

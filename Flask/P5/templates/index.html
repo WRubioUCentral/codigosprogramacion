@@ -40,47 +40,90 @@
     <section class="separacion">
     </section>
 
+    <section>
+        <h1>
+            <p>
+                Análisis gráfico
+            </p>
+        </h1>
+        <div>
+            <p>
+                El <a href="https://colombia.unir.net/actualidad-unir/graficos-estadisticos/" target="_blank">análisis gráfico</a>, también conocido como análisis técnico o chartismo, es un método para evaluar y predecir movimientos de precios en mercados financieros utilizando gráficos y patrones históricos. Se basa en la idea de que la historia de los precios de un activo puede revelar tendencias y patrones que se repiten, permitiendo a los inversores tomar decisiones informadas.
+            </p>
+        </div>
+    </section>
+
+    <section class="separacion">
+
+    </section>
+
     <!--Sección de explicación de gráficas-->
     <section class="info">
         <div class="cajon-texto">
-            <div class="texto1 restaltar bordear">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto neque voluptates adipisci dolorem fugiat quasi mollitia praesentium, consequuntur odio magni eligendi, labore, fugit consectetur natus et soluta unde nulla possimus?
-            </div>
             <div class="texto2">
-                <div class="texto2-a restaltar bordear">
+                <div class="texto2-a">
                     <div class="lineas-titulo">
                         <p>
                             Diagrama de líneas
                         </p>
                     </div>
-                    <div class="lineas">
+                    <div class="lineas restaltar bordear">
                         <div class="lineas-texto">
                             <p>
-                                Caja texto diagrama de líneas.
+                                Un <a href="https://es.wikipedia.org/wiki/Diagrama_de_una_l%C3%ADnea" target="_blank">diagrama de líneas</a>, también conocido como gráfico de líneas, es una representación visual de datos que utiliza líneas para conectar puntos de datos, mostrando la evolución de una variable a lo largo del tiempo o con respecto a otra variable. Estos diagramas son útiles para visualizar tendencias, patrones y relaciones en los datos.
                             </p>
                         </div>
                         <div class="lineas-imagen">
-                            <img src="{{ url_for('static', filename='multimedia/lineas.jpg') }} ">
+                            <!-- Gráfico -->
+                            <div>
+                                <canvas id="barChart"></canvas>
+                            </div>
+                            <script src="{{ url_for('static', filename='barras.js') }}"></script>
                         </div>
                     </div>
                 </div>
-                <div class="texto2-b restaltar bordear">
+                <div class="texto2-b">
                     <div class="lineas-titulo">
                         <p>
                             Diagrama de barras
                         </p>
                     </div>
-                    <div class="lineas">
+                    <div class="lineas restaltar bordear">
                         <div class="lineas-texto">
                             <p>
-                                Caja texto diagrama de barras.
+                                Un <a href="https://es.wikipedia.org/wiki/Diagrama_de_barras" target="_blank">diagrama de barras</a>, también conocido como gráfico de barras, es una representación visual de datos que utiliza barras rectangulares para mostrar la magnitud de diferentes categorías o valores. Las barras se dibujan con longitudes proporcionales a los valores que representan, lo que facilita la comparación visual entre diferentes categorías.
                             </p>
                         </div>
                         <div class="lineas-imagen">
-                            <img src="{{ url_for('static', filename='multimedia/barras.jpg') }} ">
+                            <!-- Gráfico de líneas -->
+                            <div>
+                                <canvas id="lineChart"></canvas>
+                            </div>
+                            <script src="{{ url_for('static', filename='lineas.js') }}"></script>
                         </div>
                     </div>
                 </div>
+
+                <div class="texto2-b">
+                    <div class="lineas-titulo">
+                        <p>
+                            Histograma
+                        </p>
+                    </div>
+                    <div class="lineas restaltar bordear">
+                        <div class="lineas-texto">
+                            <p>
+                                Un <a href="https://es.wikipedia.org/wiki/Histograma" target="_blank">histograma</a> es una representación gráfica de una variable numérica en forma de barras. Cada barra representa la frecuencia de un rango de valores, y la altura de la barra indica la cantidad de datos que caen dentro de ese rango. Los histogramas son útiles para visualizar la distribución de datos, identificar patrones como la tendencia central, la dispersión y la forma de la distribución, y detectar valores atípicos.
+                            </p>
+                        </div>
+                        <div class="lineas-imagen">
+                            <!-- Gráfico de histograma -->
+                            <div>
+                                <canvas id="histogramChart"></canvas>
+                            </div>
+                            <script src="{{ url_for('static', filename='histograma.js') }}"></script>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,10 +144,10 @@
             <div class="E-A">
                 <!-- Botón para subir CSV -->
                 <form id="csvForm" method="POST" action="/upload" enctype="multipart/form-data">
-                    <div>
+                    <div class="csv">
                         <input type="file" class="boton-carga" name="csv_file" accept=".csv" required>
                     </div>
-                    <div>
+                    <div class="csv">
                         <button type="submit" class="estilo-boton">Cargar CSV</button>
                     </div>
                 </form>

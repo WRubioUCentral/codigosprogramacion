@@ -1,13 +1,8 @@
-
-// Labels: días de la semana
-const labels = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
-
-// Data
-const data = [20, 40, 35, 30, 50, 70, 90];
-
-window.onload = function() {
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const myChart = new Chart(ctx, {
+window.addEventListener('load', function() {
+    const labels = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+    const data = [20, 40, 35, 30, 50, 70, 90];
+    const ctx = document.getElementById('barChart').getContext('2d');
+    const barChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: labels,
@@ -27,4 +22,4 @@ window.onload = function() {
             }
         }
     });
-};
+});
