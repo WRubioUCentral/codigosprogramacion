@@ -1,0 +1,23 @@
+<div>
+                                <canvas id="barChart"></canvas>
+                            </div>
+                            <script src="{{ url_for('static', filename='barras.js') }}">
+                            </script>
+
+////////////////////////////////////////////
+
+<div>
+                                <canvas id="lineChart"></canvas>
+                            </div>
+                            <script src="{{ url_for('static', filename='lineas.js') }}">
+                            </script>
+
+////////////////////////////////////////////
+
+<div>
+                                <canvas id="histogramChart"></canvas>
+                            </div>
+                            <script src="{{ url_for('static', filename='histograma.js') }}">
+                            </script>
+
+//////////////////////////////////////////

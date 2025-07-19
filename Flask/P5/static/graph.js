@@ -50,7 +50,7 @@ window.chartLib = {
                         backgroundColor: chartType === 'bar' ? 'rgba(54, 162, 235, 0.7)' : 'transparent',
                         borderColor: 'rgba(162, 106, 28, 0.7)',
                         borderWidth: 2,
-                        tension: chartType === 'line' ? 0.7 : 0,
+                        tension: chartType === 'line' ? 0.3 : 0,
 
                     }]
                 },

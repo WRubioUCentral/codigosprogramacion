@@ -27,6 +27,8 @@ document.getElementById('csvForm').addEventListener('submit', async (e) => {
         // Éxito: actualiza gráfico
         messageDiv.textContent = '✅ CSV cargado correctamente';
         messageDiv.style.color = 'green';
+        messageDiv.style.fontSize = 'large';
+        messageDiv.style.alignContent = 'center';
 
         const chartType = document.getElementById('chartType').value;
         const chartData = chartType === 'pie' ? result.data.y : result.data;

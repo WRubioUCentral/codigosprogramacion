@@ -36,98 +36,56 @@
     </section>
     <!--Hasta aquí-->
 
+
+
+
+
     <!--Sección de seperación-->
     <section class="separacion">
     </section>
+    <!--Hasta aquí-->
 
-    <section>
-        <h1>
+
+
+
+
+
+    <!--Sección de análisis gráfico-->
+    <section class="analisis-caja">
+        <div class="analisis-titulo">
             <p>
                 Análisis gráfico
             </p>
-        </h1>
-        <div>
+        </div>
+        <div class="analisis-texto">
             <p>
                 El <a href="https://colombia.unir.net/actualidad-unir/graficos-estadisticos/" target="_blank">análisis gráfico</a>, también conocido como análisis técnico o chartismo, es un método para evaluar y predecir movimientos de precios en mercados financieros utilizando gráficos y patrones históricos. Se basa en la idea de que la historia de los precios de un activo puede revelar tendencias y patrones que se repiten, permitiendo a los inversores tomar decisiones informadas.
             </p>
         </div>
-    </section>
-
-    <section class="separacion">
-
-    </section>
-
-    <!--Sección de explicación de gráficas-->
-    <section class="info">
-        <div class="cajon-texto">
-            <div class="texto2">
-                <div class="texto2-a">
-                    <div class="lineas-titulo">
-                        <p>
-                            Diagrama de líneas
-                        </p>
-                    </div>
-                    <div class="lineas restaltar bordear">
-                        <div class="lineas-texto">
-                            <p>
-                                Un <a href="https://es.wikipedia.org/wiki/Diagrama_de_una_l%C3%ADnea" target="_blank">diagrama de líneas</a>, también conocido como gráfico de líneas, es una representación visual de datos que utiliza líneas para conectar puntos de datos, mostrando la evolución de una variable a lo largo del tiempo o con respecto a otra variable. Estos diagramas son útiles para visualizar tendencias, patrones y relaciones en los datos.
-                            </p>
-                        </div>
-                        <div class="lineas-imagen">
-                            <!-- Gráfico -->
-                            <div>
-                                <canvas id="barChart"></canvas>
-                            </div>
-                            <script src="{{ url_for('static', filename='barras.js') }}"></script>
-                        </div>
-                    </div>
-                </div>
-                <div class="texto2-b">
-                    <div class="lineas-titulo">
-                        <p>
-                            Diagrama de barras
-                        </p>
-                    </div>
-                    <div class="lineas restaltar bordear">
-                        <div class="lineas-texto">
-                            <p>
-                                Un <a href="https://es.wikipedia.org/wiki/Diagrama_de_barras" target="_blank">diagrama de barras</a>, también conocido como gráfico de barras, es una representación visual de datos que utiliza barras rectangulares para mostrar la magnitud de diferentes categorías o valores. Las barras se dibujan con longitudes proporcionales a los valores que representan, lo que facilita la comparación visual entre diferentes categorías.
-                            </p>
-                        </div>
-                        <div class="lineas-imagen">
-                            <!-- Gráfico de líneas -->
-                            <div>
-                                <canvas id="lineChart"></canvas>
-                            </div>
-                            <script src="{{ url_for('static', filename='lineas.js') }}"></script>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="texto2-b">
-                    <div class="lineas-titulo">
-                        <p>
-                            Histograma
-                        </p>
-                    </div>
-                    <div class="lineas restaltar bordear">
-                        <div class="lineas-texto">
-                            <p>
-                                Un <a href="https://es.wikipedia.org/wiki/Histograma" target="_blank">histograma</a> es una representación gráfica de una variable numérica en forma de barras. Cada barra representa la frecuencia de un rango de valores, y la altura de la barra indica la cantidad de datos que caen dentro de ese rango. Los histogramas son útiles para visualizar la distribución de datos, identificar patrones como la tendencia central, la dispersión y la forma de la distribución, y detectar valores atípicos.
-                            </p>
-                        </div>
-                        <div class="lineas-imagen">
-                            <!-- Gráfico de histograma -->
-                            <div>
-                                <canvas id="histogramChart"></canvas>
-                            </div>
-                            <script src="{{ url_for('static', filename='histograma.js') }}"></script>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="video-container">
+            <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/CODIGO_DEL_VIDEO" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
         </div>
     </section>
+    <!--Hasta aquí-->
+
+
+
+
+
+
+
+    <section class="separacion">
+    </section>
+
+
+
+
+
 
     <!--Sección de seperación-->
     <section class="separacion">
@@ -161,7 +119,7 @@
                     Estado de arga
                 </p>
             </div class="E-A">
-                <div id="message">
+                <div id="message" style="padding-left: 30px;">
             </div>
         </div>
         <div class="caja-gris">
@@ -177,21 +135,21 @@
                 </form>
             </div>
         </div>
-        
+    </section>
+
+    <section class="separacion">
     </section>
 
 
-
-
-
     <!-- Gráfico -->
-    <div class="chart-container" style="height: 400px; width: 50%;">
-        <canvas id="grafico1"></canvas>
-    </div>
-    <!-- Scripts -->
-    <script src="{{ url_for('static', filename='graph.js') }}"></script>
-
-    <footer>Elaborado &cap; 2025.</footer>
-    <script src="{{ url_for('static', filename='uploadHandler.js') }}"></script>
+    <section class="grafico">
+        <div class="grafico-caja">
+            <canvas id="grafico1"></canvas>
+        </div>
+        <!-- Scripts -->
+        <script src="{{ url_for('static', filename='graph.js') }}"></script>
+        <script src="{{ url_for('static', filename='uploadHandler.js') }}"></script>
+    </section>
+    
 </body>
 </html>
