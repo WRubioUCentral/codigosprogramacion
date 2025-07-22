@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Conexión</title>
+</head>
+<body>
+
+    <section class="container">
+        
+        <div class="form-box">
+            <div>
+                <h2>Reservar Habitación</h2>
+            </div>
+            <div>
+                <form action="onclick">
+                <input type="text" name="" id="id" placeholder="ID">
+                <input type="text" name="" id="nombre" placeholder="Nombres">
+                <input type="text" name="" id="apellido" placeholder="Apellidos">
+                <input type="date" name="" id="fecha_ingreso" placeholder="Fecha de Ingreso">
+                <input type="date" name="" id="fecha_salida" placeholder="Fecha de Salida">
+                <input type="submit" value="Reservar" id="reservar">
+            </div>
+        </form>
+        </div>
+
+        <div id="mostrador"></div>
+        <script src="{{ url_for('static', filename='capturador.js') }}"></script>
+    </section>
+    
+</body>
+</html>
